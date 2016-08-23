@@ -2,8 +2,8 @@
 FROM ubuntu:latest
 MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
 
-ENV http_proxy http://proxy-us.intel.com:911
-ENV https_proxy http://proxy-us.intel.com:911
+# ENV http_proxy http://proxy-us.intel.com:911
+# ENV https_proxy http://proxy-us.intel.com:911
 
 RUN apt-get update && apt-get install -y \
     numactl \
