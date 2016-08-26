@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip
 
 RUN pip3 install --upgrade pip \
-    && pip3 install numpy scipy
+    && pip install numpy scipy
 
 USER nobody
 WORKDIR /benchdata
