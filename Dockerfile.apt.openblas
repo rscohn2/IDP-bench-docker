@@ -1,0 +1,8 @@
+FROM rscohn2/bench.ubuntu.base
+MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
+
+RUN apt-get install -y \
+    python3-numpy \
+    python3-scipy
+
+RUN update-alternatives --set libblas.so.3 /usr/lib/openblas-base/libblas.so.3
