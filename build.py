@@ -19,5 +19,5 @@ subprocess.check_call('docker login -u $DOCKER_USER -p $DOCKER_PASSWORD',shell=T
 build('ubuntu.base', False)
 #build('centos.base', False)
 for v in ['ubuntu.pip','apt.openblas','apt.reference','apt.atlas']:
-    build(v,False)
+    build(v,True)
 
