@@ -1,0 +1,4 @@
+FROM rscohn2/bench.centos.base
+MAINTAINER Robert Cohn <Robert.S.Cohn@intel.com>
+
+RUN pip install numpy scipy
