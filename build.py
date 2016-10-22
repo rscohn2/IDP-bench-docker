@@ -12,11 +12,11 @@ def get_proxies():
             proxies += ' --build-arg %s=%s' % (var,os.environ[var])
     return proxies
 
-def docker_build(envs, dkr_acct='rscohn2'):
+def docker_build(envs):
     proxies = get_proxies()
     for env in envs:
         dockerfile = dockerfileName(env)
-        repo = repoName(env)
+        repo = 'rscohn2/%s' % repoName(env)
         tags = '-t %s' % repo
         command = 'docker build %s %s --file %s .' % (proxies,tags,dockerfile)
         subprocess.check_call('df -h', shell=True)
